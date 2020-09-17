@@ -1,0 +1,60 @@
+@import '../../styles/main.scss';
+
+.backgroundChampion {
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://lolstatic-a.akamaihd.net/frontpage/apps/prod/rg-champion-aatrox/pt_BR/5b922bef08881410f8fffa7273c30a75dfb1d11f/assets/downloads/wallpapers/aatrox-1920x1080.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .4;
+  }
+}
+
+.body-champion {
+  height: calc(100vh - 148px - 50px);
+
+  .container-info-champion {
+    color: $light;
+    height: 100%;
+    @include d-flex(center, center, column);
+
+    h1 {
+      font: bold 3rem 'Roboto',sans-serif;
+    }
+
+    h2 {
+      font: 500 1.7rem 'Roboto',sans-serif;
+      text-transform: capitalize;
+    }
+
+    p {
+      width: 450px;
+      text-align: center;
+      margin:1.5rem 0;
+      font: 300 1rem 'Open Sans',sans-serif;
+      line-height: 1.5;
+      color: #ffffffbb;
+    }
+
+    h3 {
+      font: 500 1.3rem 'Roboto',sans-serif;
+      margin: .3rem 0;
+      color: #ffffffcc;
+
+      span {
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+  }
+}

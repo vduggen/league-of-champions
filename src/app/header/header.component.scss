@@ -1,0 +1,41 @@
+@import '../../styles/main.scss';
+header {
+  width: 100%;
+  height: auto;
+  @include d-flex;
+
+  a {
+    cursor: pointer;
+
+    &:hover {
+      .logo-header {
+        opacity: .9
+      }
+    }
+
+    .logo-header {
+      width: 120px;
+      transition: ease-in-out .3s;
+    }
+  }
+}
+
+nav {
+  width: 100%;
+  @include d-flex;
+
+  a {
+    margin: 0 .2rem;
+    font: 400 1.1rem 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: $swatch_1;
+    transition: ease-in-out .3s;
+
+    &:hover {
+      color: $swatch_3;
+    }
+  }
+  .activeRouteLink {
+    color: $swatch_3;
+  }
+}

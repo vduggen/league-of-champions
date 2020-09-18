@@ -8,9 +8,9 @@
 </p>
 
 <p align="center">  
-  <img src="https://img.shields.io/github/languages/count/vduggen/LeagueOfChampions">
-  <img src="https://img.shields.io/github/languages/top/vduggen/LeagueOfChampions">
-  <img src="https://img.shields.io/github/license/vduggen/LeagueOfChampions">
+  <img src="https://img.shields.io/github/languages/count/vduggen/league-of-champions">
+  <img src="https://img.shields.io/github/languages/top/vduggen/league-of-champions">
+  <img src="https://img.shields.io/github/license/vduggen/league-of-champions">
 </p>
 
 <p align="center">

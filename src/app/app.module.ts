@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ChampionsComponent } from './champions/champions.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ChampionComponent } from './champion/champion.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     ChampionsComponent,
     FooterComponent,
+    ChampionComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     Title

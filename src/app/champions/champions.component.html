@@ -1,19 +1,13 @@
-<div class="backgroundChampion"></div>
+<article id="container-champions">
+  <header id="header-champions">
+    <h1>Champions</h1>
+  </header>
 
-<section class="body-champion">
-  <div class="container-info-champion">
-    <h1>Aatrox</h1>
-    <h2>a Espada Darkin</h2>
-    <p>
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam,
-    sequi ex! Minima dolorum distinctio nam ipsam perferendis doloribus earum
-    dolores, soluta, voluptatem porro mollitia repudiandae praesentium! Sequi
-    unde magni voluptatum!
-    </p>
-    <h3>Tank</h3>
-    <h3>Fighter</h3>
-    <h3><span>HP:</span> 580</h3>
-    <h3><span>Attack Damage:</span> 60</h3>
-    <h3><span>Attack Speed:</span> 0.651</h3>
-  </div>
-</section>
+  <section class="container-boxChampions">
+    <a routerLink='/champion/{{champion.id}}' *ngFor="let champion of allChampions">
+      <div class="boxChampion" [ngStyle]="{backgroundImage: 'url('+ champion.icon +')'}">
+        <h4>{{champion.name}}</h4>
+      </div>
+    </a>
+  </section>
+</article>

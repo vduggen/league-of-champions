@@ -1,39 +1,15 @@
+<div class="backgroundChampion" [ngStyle]="{backgroundImage: 'url('+ randomImage +')'}"></div>
+
 <article id="container-home">
   <header id="header-top-rated-champions">
     <h1>Top Rated Champions</h1>
   </header>
 
-  <section id="container-boxChampions">
-    <div class="boxChampion">
-      <h4>Aatrox</h4>
-    </div>
-
-    <div class="boxChampion">
-      <h4>Aatrox</h4>
-    </div>
-
-    <div class="boxChampion">
-      <h4>Aatrox</h4>
-    </div>
-
-    <div class="boxChampion">
-      <h4>Aatrox</h4>
-    </div>
-
-    <div class="boxChampion">
-      <h4>Aatrox</h4>
-    </div>
-
-    <div class="boxChampion">
-      <h4>Aatrox</h4>
-    </div>
-
-    <div class="boxChampion">
-      <h4>Aatrox</h4>
-    </div>
-
-    <div class="boxChampion">
-      <h4>Aatrox</h4>
-    </div>
+  <section class="container-boxChampions">
+    <a routerLink='/champion/{{champion.id}}' *ngFor="let champion of infosChampions">
+      <div class="boxChampion" [ngStyle]="{backgroundImage: 'url('+ champion.icon +')'}">
+        <h4>{{champion.name}}</h4>
+      </div>
+    </a>
   </section>
 </article>

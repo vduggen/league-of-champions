@@ -13,11 +13,18 @@ export class FooterComponent implements OnInit {
   constructor(location: Location, router: Router) {
     router.events.subscribe(val => {
       if (location.path() != "") {
-        this.route = location.path();
+        let resultVerify: string = this.verifyRoute(location.path());
+        this.route = resultVerify;
       } else {
         this.route = "Home";
       }
     });
+  }
+
+  verifyRoute(pathname: string) {
+    let getRoute = pathname.match('/champions');
+    let result = getRoute === null ? pathname : getRoute[0]
+    return result;
   }
 
   ngOnInit(): void {

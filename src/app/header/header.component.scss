@@ -1,4 +1,5 @@
 @import '../../styles/main.scss';
+
 header {
   width: 100%;
   height: auto;
@@ -26,7 +27,7 @@ nav {
 
   a {
     margin: 0 .2rem;
-    font: 400 1.1rem 'Open Sans', sans-serif;
+    font: 500 1.1rem 'Roboto', sans-serif;
     text-decoration: none;
     color: $swatch_1;
     transition: ease-in-out .3s;

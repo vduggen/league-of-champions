@@ -1,5 +1,24 @@
 @import '../../styles/main.scss';
 
+.backgroundChampion {
+  width: 100%;
+  height: 121vh;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .6;
+  }
+}
+
 #container-home {
   width: 1140px;
   margin: 0 auto;
@@ -10,59 +29,63 @@
 
     h1 {
       font: 500 1.5rem 'Roboto',sans-serif;
+      color: $light;
     }
   }
 
-  #container-boxChampions {
+  .container-boxChampions {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     place-items: center;
     row-gap: 1.5rem;
 
-    .boxChampion {
-      width: 250px;
-      height: 250px;
-      background-image: url('https://pm1.narvii.com/6969/4cfa27c8dcfd8636337d60e6c1f4a7cb693a9bf8r1-380-380v2_00.jpg');
-      background-size: cover;
-      border-radius: 8px;
-      box-shadow: 0 0 14px #000000AA;
-      position: relative;
-      cursor: pointer;
-      transition: ease-in-out .3s;
+    a {
+      text-decoration: none;
 
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 14px #000000FF;
-
-        &::after {
-          opacity:.4;
-        }
-
-        h4 {
-          opacity: 1;
-        }
-      }
-
-      h4 {
-        font: bold 2rem 'Roboto',sans-serif;
-        color: $light;
-        z-index: 3;
-        opacity: 0;
-        transition: ease-in-out .3s;
-      }
-
-      @include d-flex;
-
-      &::after {
-        content: '';
-        background: #000;
-        opacity:0;
-        position:absolute;
-        top:0;
-        width: 100%;
+      .boxChampion {
+        width: 250px;
+        height: 250px;
+        background-size: cover;
         border-radius: 8px;
-        height: 100%;
+        box-shadow: 0 0 14px #000000AA;
+        position: relative;
+        cursor: pointer;
         transition: ease-in-out .3s;
+  
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 0 14px #000000FF;
+  
+          &::after {
+            opacity:.4;
+          }
+  
+          h4 {
+            opacity: 1;
+          }
+        }
+  
+        h4 {
+          font: bold 2rem 'Roboto',sans-serif;
+          color: $light;
+          z-index: 3;
+          opacity: 0;
+          transition: ease-in-out .3s;
+        }
+  
+        @include d-flex;
+  
+        &::after {
+          content: '';
+          background: #000;
+          opacity:0;
+          position:absolute;
+          top:0;
+          width: 100%;
+          border-radius: 8px;
+          height: 100%;
+          transition: ease-in-out .3s;
+        }
       }
     }
   }

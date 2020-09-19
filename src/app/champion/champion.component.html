@@ -1,0 +1,16 @@
+<div class="backgroundChampion" [ngStyle]="{backgroundImage: 'url('+ infoChampion.splash +')'}"></div>
+
+<section class="body-champion">
+  <div class="container-info-champion">
+    <h1>{{infoChampion.name}}</h1>
+    <h2>{{infoChampion.title}}</h2>
+    <p>{{infoChampion.description}}</p>
+    <div >
+      <h3>{{infoChampion.tags[0]}}</h3>
+      <h3>{{infoChampion.tags[1]}}</h3>
+    </div>
+    <h3><span>HP:</span> {{infoChampion.stats.hp}}</h3>
+    <h3><span>Attack Damage:</span> {{infoChampion.stats.attackdamage}}</h3>
+    <h3><span>Attack Speed:</span> {{infoChampion.stats.attackspeed}}</h3>
+  </div>
+</section>

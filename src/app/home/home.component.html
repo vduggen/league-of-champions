@@ -1,6 +1,6 @@
-<div class="backgroundChampion" [ngStyle]="{backgroundImage: 'url('+ randomImage +')'}"></div>
+<div class="backgroundChampion" *ngIf="infosChampions" [ngStyle]="{backgroundImage: 'url('+ randomImage +')'}"></div>
 
-<article id="container-home">
+<article id="container-home" *ngIf="infosChampions">
   <header id="header-top-rated-champions">
     <h1>Top Rated Champions</h1>
   </header>
